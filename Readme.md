@@ -12,7 +12,7 @@ In the root folder run the command:
 $ npm install
 ```
 
-## Use the following scripts
+## Build the app
 
 ### Build
 
@@ -20,6 +20,8 @@ This command compiles the app to javascript into ./build folder
 ```bash
 npm run build
 ```
+
+## Run the app
 
 ### Start
 
@@ -36,3 +38,11 @@ Runs the app on development mode
 ```bash
 npm run dev
 ```
+
+## Available Endpoint
+
+`http://localhost:3001/analyze`
+
+ body: {
+  code: "solidity code here"
+ }
