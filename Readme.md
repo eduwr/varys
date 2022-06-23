@@ -2,6 +2,8 @@
 
 This is a sample project for Varys Capital.
 
+> I did some changes to support inline contracts, since splitting into linebreaks is not always the best idea. I also change the req to accept a query instead of pass the contract in the body. These changes are on [this branch](https://github.com/eduwr/varys/tree/hotfix/fix-getImports-and-getContract-to-support-inline-code). I didn't changed it here because this code was already submitted.
+
 # Getting started
 
 ## Install the dependencies
