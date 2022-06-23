@@ -12,12 +12,13 @@ router.post("/analyze", (req: Request, res) => {
 
   const { code } = req.query
  
-  if (!code) {
+  if (!code || typeof code !== "string") {
     res.status(400)
     res.send({ error: "Bad Request" })
+    return;
   }
 
-  const lines = getLines(code as string);
+  const lines = getLines(code);
 
   const imports = getImports(lines).map((raw) => raw.replace(importCleanRegEx, ""));
   const contracts = getContract(lines).map(raw => raw.trim().split(" ")[1]);
