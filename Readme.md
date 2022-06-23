@@ -41,13 +41,16 @@ npm run dev
 
 ## Available Endpoint
 
-*** Example endpoint
-`http://localhost:3001/analyze?code=pragma solidity ^0.8.0; import "@openzeppelin/contracts/token/ERC721/ERC721.sol";import "hardhat/console.sol";contract GreenDAO is ERC721 { string[] public names;mapping(string => bool) public nameExists;modifier uniqueName(string memory _name) { require(!nameExists[_name], "Names must be unique"); _;}constructor() ERC721("GreenDAO", "GREEN") {console.log("Deploying a GreenDAO with `GREEN` symbol.");}}`
+#### Example endpoint
 
-parameters:
+```
+http://localhost:3001/analyze?code=pragma solidity ^0.8.0; import "@openzeppelin/contracts/token/ERC721/ERC721.sol";import "hardhat/console.sol";contract GreenDAO is ERC721 { string[] public names;mapping(string => bool) public nameExists;modifier uniqueName(string memory _name) { require(!nameExists[_name], "Names must be unique"); _;}constructor() ERC721("GreenDAO", "GREEN") {console.log("Deploying a GreenDAO with `GREEN` symbol.");}}
+```
+
+#### parameters:
 > code: string;
 
-example response:
+#### example response:
 
 ```json
 {
