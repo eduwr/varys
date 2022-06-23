@@ -10,8 +10,6 @@ const importCleanRegEx = /import|\s|;|"/ig
 
 router.post("/analyze", (req: Request, res) => {
 
-  console.log(req)
-
   const { code } = req.body
 
   if (!code) {
